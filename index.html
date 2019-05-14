@@ -197,17 +197,15 @@
 
             <div class="col-md-12">
                 <h4>Open Source Softwares</h4>
-                <div class="col-md-12" style="text-align: justify">
+                <div class="col-md-9" style="text-align: justify">
                     <ul>
                         <li>SMG2S: Scalable Matrix Generator with Given Spectra</li>
                             <ul>
                                 <li><a href="https://smg2s.github.io" target="_blank">Homepage</a></li>
                                 <li><a href="https://github.com/SMG2S/SMG2S" target="_blank">Development version on Github</a></li>
                                 <li>
-                                    <span id="content">
-                                        SMG2S is a software which provides to generator the non-Hermitian and non-Symmetric Matrices with User-customized eigenvalues. SMG2S is implemented in parallel based on MPI (Message Passing Interface) and C++11 to support efficiently the generation of test matrices on distributed memory platforms.
-
-                                        <br>Iterative linear algebra methods are important for the applications in various fields. The analysis of the iterative method behaviors is complex, and it is necessary to evaluate their convergence to solve extremely large non-Hermitian eigenvalue and linear problems on parallel and/or distributed machines. This convergence depends on the properties of spectra. Thus, we propse SMG2S to generate large matrices with known spectra to benchmark these methods. The generated matrices are non-Hermitian and non-trivial, with very high dimension.
+                                    <span id="s">
+                                        SMG2S is a software which provides to generator the non-Hermitian and non-Symmetric Matrices with User-customized eigenvalues. SMG2S is implemented in parallel based on MPI (Message Passing Interface) and C++11 to support efficiently the generation of test matrices on distributed memory platforms. We propse SMG2S to generate large matrices with known spectra to benchmark the iterative methods on supercomputers, whose convergence has strong connection with the properties of spectra. 
                                     </span>                                
                                 
                                 </li>
@@ -215,16 +213,48 @@
                     </ul>
                 </div>
 
-                <div  class="left">
+                <div class="col-md-3">
+                    <a href="https://smg2s.github.io" target="_blank">
+                        <img class="img-responsive img-rounded" src="res/SMG2S_logo.png" width="200px" alt="">
+                    </a>
+                
+              </div>
 
-                       <span id="content">
-                        </span>
+            <div class="col-md-12">
+                <h4>Codes</h4>
+
+                <div class="col-md-12" style="text-align: justify">
+                    <ul>
+                        <li>UCGLE: Unite and Conquer GMRES/LS-ERAM method</li>
+                            <ul>
+                                <li><a href="https://github.com/brunowu/UCGLE" target="_blank">Github</a></li>
+                                <li>
+                                    <span id="ucgle">
+                                        UCGLE is a distributed and parallel implementation of iterative method based on C/MPI and PETSc to solve very large non-Hermitian linear systems in large-scale homogenous and heterogeneous clusters. UCGLE is a special variant of hybrid iterative methods preconditioned by Least-Squares polynomial. It uses the static MPI communicator to support the asynchronous communication.
+                                    </span>                                
+                                
+                                </li>
+                            </ul>
+                    </ul>
+                </div>
+
+                 <div class="col-md-12" style="text-align: justify">
+                    <ul>
+                        <li>m-UCGLE: multiple Unite and Conquer GMRES/LS-Eigensolver method</li>
+                            <ul>
+                                <li><a href="https://github.com/brunowu/UCGLE" target="_blank">Github</a></li>
+                                <li>
+                                    <span id="mucgle">
+                                        m-UCGLE is an extension of UCGLE based on C++/MPI, Trilinos/Belos and Trilinos/Anasazi to solve large non-Hermitian linear systems in large-scale homogenous and heterogeneous clusters, with the reduction of global communications and synchronization points. Multiple block GMRES and block Krylov-schur computing components can be allocated simultaneously and managed by a specified scheduler. Convergence of m-UCGLE is accelerated by a block version of Least Squares Polynomial preconditioner developed during my thesis. Compared with hybrid block GMRES, it has better parallel performance.
+                                    </span>                                
+                                
+                                </li>
+                            </ul>
+                    </ul>
                 </div>
 
             </div>
 
-            <div class="col-md-12">
-                <h4>Codes</h4>
             </div>
 
 
@@ -233,8 +263,8 @@
 
 
    <script type="text/javascript">
-       var btn=document.getElementById('btn');
-       var content=document.getElementById('content');
+
+       var content=document.getElementById('smg2s');
        var str=content.innerHTML;
 
        var sp = document.createElement("sp");
@@ -258,6 +288,57 @@
        content.appendChild(a);
    </script>
 
+   <script type="text/javascript">
+
+       var content2=document.getElementById('ucgle');
+       var str2=content2.innerHTML;
+
+       var sp2 = document.createElement("sp2");
+       var a2 = document.createElement("a2");
+       sp2.innerHTML = str2.substring(0,0);
+
+       a2.innerHTML = str2.length>0?"... Read More":"";
+       a2.href= "javascript:void(0)";
+
+        a2.onclick=function(){
+           if(a2.innerHTML.indexOf("Read More")>0) {
+                a2.innerHTML = "<<&nbsp;Collapse";
+                sp2.innerHTML = str2;
+           } else {
+                a2.innerHTML = "... Read More";
+                sp2.innerHTML = str2.substring(0,0);           }
+       }
+
+       content2.innerHTML = "";
+       content2.appendChild(sp2);
+       content2.appendChild(a2);
+   </script>
+
+   <script type="text/javascript">
+
+       var content3=document.getElementById('mucgle');
+       var str3=content3.innerHTML;
+
+       var sp3 = document.createElement("sp3");
+       var a3 = document.createElement("a3");
+       sp3.innerHTML = str3.substring(0,0);
+
+       a3.innerHTML = str3.length>0?"... Read More":"";
+       a3.href= "javascript:void(0)";
+
+        a3.onclick=function(){
+           if(a3.innerHTML.indexOf("Read More")>0) {
+                a3.innerHTML = "<<&nbsp;Collapse";
+                sp3.innerHTML = str3;
+           } else {
+                a3.innerHTML = "... Read More";
+                sp3.innerHTML = str3.substring(0,0);           }
+       }
+
+       content3.innerHTML = "";
+       content3.appendChild(sp3);
+       content3.appendChild(a3);
+   </script>
 
         <footer>
             <div class="row">
