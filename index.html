@@ -18,6 +18,10 @@
     <link href="css/round-about.css" rel="stylesheet">
 
 
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript" src="js/priority-queue.js"></script>
     <script type="text/javascript" src="js/bibtex_js.js"></script>
@@ -71,22 +75,18 @@
             <div class="col-md-12">
               <h2 class="page-header">Research</h2>
 
-                <div style="float: left; width: 50%;">
                     <h4>HPC Algorithms</h4>
                     <ul>
                         <li>Itertive methods for linear systems and eigenvalue problems</li>
                         <li>Machine learning</li>
                     </ul>
-                </div>
 
-                <div style="float: right; width: 50%;">
                     <h4>HPC Applications and Software Framework Development</h4>
                     <ul>
                         <li>High Performance Computing software engineering</li>
                         <li>HPC applications</li>
                         <li>Parallel Programming</li>
                     </ul>
-                </div>
             </div>
         </div>
 
@@ -188,6 +188,76 @@
                     <h4>Talks at conferences</h4>
                 </div>
         </div>
+
+
+        <div id="Software" class="row" style="padding-top:20px">
+            <div class="col-md-12">
+              <h2 class="page-header">Software</h2>
+            </div>
+
+            <div class="col-md-12">
+                <h4>Open Source Softwares</h4>
+                <div class="col-md-12" style="text-align: justify">
+                    <ul>
+                        <li>SMG2S: Scalable Matrix Generator with Given Spectra</li>
+                            <ul>
+                                <li><a href="https://smg2s.github.io" target="_blank">Homepage</a></li>
+                                <li><a href="https://github.com/SMG2S/SMG2S" target="_blank">Development version on Github</a></li>
+                                <li>
+                                    <span id="content">
+                                        SMG2S is a software which provides to generator the non-Hermitian and non-Symmetric Matrices with User-customized eigenvalues. SMG2S is implemented in parallel based on MPI (Message Passing Interface) and C++11 to support efficiently the generation of test matrices on distributed memory platforms.
+
+                                        <br>Iterative linear algebra methods are important for the applications in various fields. The analysis of the iterative method behaviors is complex, and it is necessary to evaluate their convergence to solve extremely large non-Hermitian eigenvalue and linear problems on parallel and/or distributed machines. This convergence depends on the properties of spectra. Thus, we propse SMG2S to generate large matrices with known spectra to benchmark these methods. The generated matrices are non-Hermitian and non-trivial, with very high dimension.
+                                    </span>                                
+                                
+                                </li>
+                            </ul>
+                    </ul>
+                </div>
+
+                <div  class="left">
+
+                       <span id="content">
+                        </span>
+                </div>
+
+            </div>
+
+            <div class="col-md-12">
+                <h4>Codes</h4>
+            </div>
+
+
+        </div>
+
+
+
+   <script type="text/javascript">
+       var btn=document.getElementById('btn');
+       var content=document.getElementById('content');
+       var str=content.innerHTML;
+
+       var sp = document.createElement("sp");
+       var a = document.createElement("a");
+       sp.innerHTML = str.substring(0,0);
+
+       a.innerHTML = str.length>0?"... Read More":"";
+       a.href= "javascript:void(0)";
+
+        a.onclick=function(){
+           if(a.innerHTML.indexOf("Read More")>0) {
+                a.innerHTML = "<<&nbsp;Collapse";
+                sp.innerHTML = str;
+           } else {
+                a.innerHTML = "... Read More";
+                sp.innerHTML = str.substring(0,0);           }
+       }
+
+       content.innerHTML = "";
+       content.appendChild(sp);
+       content.appendChild(a);
+   </script>
+
 
         <footer>
             <div class="row">
