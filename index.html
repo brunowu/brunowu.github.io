@@ -474,6 +474,19 @@
 
     <script>$( "#navbar" ).load("contents/navbar.html #navbar");</script>
 
+    <script>
+$(window).scroll(function () {
+  if ($(window).width() < 768) {
+    $("#navbar a").click(function () {
+      $("#navbar").collapse('hide');
+    });
+    $(window).scroll(function () {
+      $("#navbar").collapse('hide');
+    });
+  }
+});
+</script>
+
 </body>
 
 </html>
