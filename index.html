@@ -11,6 +11,9 @@
 
     <title>Xinzhe Wu's Homepage</title>
 
+    <link rel="icon" href="res/xinzhewu.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="res/xinzhewu.ico" type="image/x-icon">
+
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -341,23 +344,25 @@
 
             <div class="col-md-8" style="text-align: justify">
                     <ul>
-                        <li>SMG2S: Scalable Matrix Generator with Given Spectra</li>
-                            <ul>
-                                <li><a href="https://smg2s.github.io" target="_blank">Homepage</a></li>
-                                <li><a href="https://github.com/SMG2S/SMG2S" target="_blank">Development version on Github</a></li>
-                                <li>
-                                    <span id="s">
-                                        SMG2S is a software which provides to generator the non-Hermitian and non-Symmetric Matrices with User-customized eigenvalues. SMG2S is implemented in parallel based on MPI (Message Passing Interface) and C++11 to support efficiently the generation of test matrices on distributed memory platforms. We propse SMG2S to generate large matrices with known spectra to benchmark the iterative methods on supercomputers, whose convergence has strong connection with the properties of spectra. 
-                                    </span>                                
-                                
-                                </li>
-                            </ul>
+                        <li><strong>SMG2S: Scalable Matrix Generator with Given Spectra</strong> &nbsp;
+                               <a href="https://smg2s.github.io" target="_blank">
+                            <img src="res/home-button.png" width="15px" alt="">
+                            </a> &nbsp;
+                               <a href="https://github.com/SMG2S/SMG2S" target="_blank">
+                            <img src="res/GitHub-Mark/PNG/GitHub-Mark-32px.png" width="15px" alt="">
+                            </a>   
+                        </li>
+                        <br>
+                        <p>
+                            <i>SMG2S is a software which provides to generator the non-Hermitian and non-Symmetric Matrices with User-customized eigenvalues. SMG2S is implemented in parallel based on MPI (Message Passing Interface) and C++11 to support efficiently the generation of test matrices on distributed memory platforms. We propse SMG2S to generate large matrices with known spectra to benchmark the iterative methods on supercomputers, whose convergence has strong connection with the properties of spectra. </i>
+                        </p>
+            
                     </ul>
             </div>
 
             <div class="col-md-3">
                     <a href="https://smg2s.github.io" target="_blank">
-                        <img class="img-responsive img-rounded" src="res/SMG2S_logo.png" width="230px" alt="">
+                        <img class="img-responsive img-rounded" src="res/SMG2S_logo.png" width="200px" alt="">
                     </a>    
             </div>
 
@@ -370,32 +375,32 @@
 
             <div class="col-md-12" style="text-align: justify">
                     <ul>
-                        <li>UCGLE: Unite and Conquer GMRES/LS-ERAM method</li>
-                            <ul>
-                                <li><a href="https://github.com/brunowu/UCGLE" target="_blank">Github</a></li>
-                                <li>
-                                    <span id="ucgle">
-                                        UCGLE is a distributed and parallel implementation of iterative method based on C/MPI and PETSc to solve very large non-Hermitian linear systems in large-scale homogenous and heterogeneous clusters. UCGLE is a special variant of hybrid iterative methods preconditioned by Least-Squares polynomial. It uses the static MPI communicator to support the asynchronous communication.
-                                    </span>                                
-                                
-                                </li>
-                            </ul>
-                    </ul>
+                        <li><strong>UCGLE: Unite and Conquer GMRES/LS-ERAM method</strong> &nbsp;
+                               <a href="https://github.com/brunowu/UCGLE" target="_blank">
+                            <img src="res/GitHub-Mark/PNG/GitHub-Mark-32px.png" width="15px" alt="">
+                            </a>
+                        </li>
+                        <br>
+                        <p>
+                        <i>
+                        UCGLE is a distributed and parallel implementation of iterative method based on C/MPI and PETSc to solve very large non-Hermitian linear systems in large-scale homogenous and heterogeneous clusters. UCGLE is a special variant of hybrid iterative methods preconditioned by Least-Squares polynomial. It uses the static MPI communicator to support the asynchronous communication. 
+                        </i>
+                        </p>
             </div>
 
             <div class="col-md-12" style="text-align: justify">
                     <ul>
-                        <li>m-UCGLE: multiple Unite and Conquer GMRES/LS-Eigensolver method</li>
-                            <ul>
-                                <li><a href="https://github.com/brunowu/UCGLE" target="_blank">Github</a></li>
-                                <li>
-                                    <span id="mucgle">
-                                        m-UCGLE is an extension of UCGLE based on C++/MPI, Trilinos/Belos and Trilinos/Anasazi to solve large non-Hermitian linear systems in large-scale homogenous and heterogeneous clusters, with the reduction of global communications and synchronization points. Multiple block GMRES and block Krylov-schur computing components can be allocated simultaneously and managed by a specified scheduler. Convergence of m-UCGLE is accelerated by a block version of Least Squares Polynomial preconditioner developed during my thesis. Compared with hybrid block GMRES, it has better parallel performance.
-                                    </span>                                
-                                
-                                </li>
-                            </ul>
-                    </ul>
+                        <li><strong>m-UCGLE: multiple Unite and Conquer GMRES/LS-Eigensolver method</strong> &nbsp;
+                               <a href="https://github.com/brunowu/m-UCGLE" target="_blank">
+                            <img src="res/GitHub-Mark/PNG/GitHub-Mark-32px.png" width="15px" alt="">
+                            </a>
+                        </li>
+                        <br>
+                        <p><i>
+                        m-UCGLE is an extension of UCGLE based on C++/MPI, Trilinos/Belos and Trilinos/Anasazi to solve large non-Hermitian linear systems with multiple Right-hand Sides at the same time on large-scale homogenous and heterogeneous clusters. Multiple block GMRES and block Krylov-schur computing components can be allocated simultaneously and managed by a specified scheduler. Convergence of m-UCGLE is accelerated by a block version of Least Squares Polynomial preconditioner developed during my thesis.                             </i>
+     
+                        </p>
+
             </div>
 
             
